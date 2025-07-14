@@ -1,0 +1,42 @@
+Instruções Comuns
+
+Seu projeto deve ser escrito em C.
+
+Seu projeto deve ser escrito de acordo com a Norma. Se você tiver arquivos/funções bônus, eles serão incluídos na verificação da norma e você receberá um 0 se houver um erro de norma dentro deles.
+
+Suas funções não devem ser encerradas inesperadamente (falha de segmentação, erro de barramento, liberação dupla, etc.), exceto por comportamentos indefinidos. Se isso acontecer, seu projeto será considerado não funcional e receberá um 0 durante a avaliação.
+
+Todo o espaço de memória alocado no heap deve ser liberado adequadamente quando necessário. Vazamentos não serão tolerados.
+
+Se o assunto exigir, você deve enviar um Makefile que compilará seus arquivos de origem para a saída necessária com as flags -Wall, -Wextra e -Werror, usar cc e seu Makefile não deve ser relinkado.
+
+Seu Makefile deve conter pelo menos as regras $(NAME), all, clean, fclean e re.
+
+Para entregar bônus ao seu projeto, você deve incluir um bônus de regra no seu Makefile, que adicionará todos os cabeçalhos, bibliotecas ou funções proibidas na parte principal do projeto. Os bônus devem estar em um arquivo diferente, _bonus.{c/h}, caso o assunto não especifique nada diferente. A avaliação da parte obrigatória e da parte bônus é feita separadamente.
+
+Se o seu projeto permitir o uso da libft, você deve copiar o código-fonte e o Makefile associado para uma pasta libft com o Makefile associado. O Makefile do seu projeto deve compilar a biblioteca usando o Makefile e, em seguida, compilar o projeto.
+
+Incentivamos você a criar programas de teste para o seu projeto, mesmo que este trabalho não precise ser submetido e não seja avaliado. Isso lhe dará a oportunidade de testar facilmente o seu trabalho e o trabalho dos seus colegas. Você achará esses testes especialmente úteis durante a sua defesa. De fato, durante a defesa, você tem liberdade para usar seus testes e/ou os testes do colega que está avaliando.
+
+Envie seu trabalho para o repositório git designado. Somente o trabalho no repositório Git será avaliado. Se a Deepthought for designada para avaliar seu trabalho, isso será feito após as avaliações dos seus pares. Se ocorrer um erro em qualquer seção do seu trabalho durante a avaliação da Deepthought, a avaliação será interrompida.
+
+Declarar variáveis globais é estritamente proibido.
+
+Se você precisar de funções auxiliares para decompor uma função mais complexa, defina-as como funções estáticas para restringir seu escopo ao arquivo apropriado.
+
+Todos os arquivos devem ser colocados na raiz do seu repositório.
+
+Enviar arquivos não utilizados não é permitido.
+
+Todo arquivo .c deve ser compilado com as seguintes flags: -Wall -Wextra -Werror.
+
+Você deve usar o comando (ar) para criar sua biblioteca. O uso de libtool é estritamente proibido.
+
+Seu arquivo libft.a deve ser criado na raiz do seu repositório.
+
+Para começar, você deve reimplementar um conjunto de funções da libc. Sua versão terá os mesmos protótipos e comportamentos dos originais, seguindo rigorosamente suas definições na página de manual. A única diferença serão seus nomes, pois devem começar com o prefixo "ft_". Por exemplo, strlen se torna ft_strlen.
+
+Alguns dos protótipos de função que você precisa reimplementar usam o qualificador "restrict". Esta palavra-chave faz parte do padrão C99. Portanto, é proibido incluí-la em seus próprios protótipos ou compilar seu código com a flag -std=c99.
+
+As seguintes funções devem ser reescritas sem depender de funções externas:
+
