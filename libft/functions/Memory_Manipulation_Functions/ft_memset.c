@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:20:01 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/14 04:04:23 by marvin           ###   ########.fr       */
+/*   Updated: 2025/07/14 21:33:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,26 @@
 
 void *ft_memset(void *s, int c, size_t n)
 {
+	int	fill_in;
+	char *str;
+	str = (char *)s;
 
-    
-    // 1. Como acessar cada byte da memória?
-    // 2. Como fazer um loop n vezes?
-    // 3. O que retornar?
+	fill_in = 0;
+	while (fill_in <= n)
+	{
+		str[fill_in] = c;
+		fill_in++;
+	}
+	return (s);
+}
+
+int main(void)
+{
+	char str[10] = "Hello";
+
+	printf("Antes: %s\n", str);
+	ft_memset(str, 'X', 3);
+	printf("Depois: %s\n", str);  // Deve ser "XXXlo"
+
+	return (0);
 }
