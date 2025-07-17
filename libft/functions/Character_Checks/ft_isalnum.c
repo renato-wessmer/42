@@ -6,7 +6,7 @@
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:19:18 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/17 07:07:22 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/17 07:16:02 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int	main (void)
 	printf("%d\n", ft_isalnum('A'));
 	printf("%d\n", ft_isalnum('Z'));
 	printf("%d\n", ft_isalnum(' '));
-	printf("%d\n", ft_isalnum('^'));
+	printf("%d\n", ft_isalnum('^'))
 }
