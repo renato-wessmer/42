@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 16:11:14 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 07:02:37 by rwessner         ###   ########.fr       */
+/*   Created: 2025/07/12 09:19:24 by rwessner          #+#    #+#             */
+/*   Updated: 2025/07/12 09:19:25 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Arquivo: libft.h
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <stddef.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-
-size_t	ft_strlen(const char *s);
-#endif

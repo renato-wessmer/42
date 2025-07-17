@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   2_ft_isdigit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 16:11:14 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 07:02:37 by rwessner         ###   ########.fr       */
+/*   Created: 2025/07/12 09:19:27 by rwessner          #+#    #+#             */
+/*   Updated: 2025/07/17 07:00:20 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Arquivo: libft.h
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdio.h>
 
-# include <stddef.h>
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-
-size_t	ft_strlen(const char *s);
-#endif
+int	main(void)
+{
+	printf("%d\n", ft_isdigit('1'));
+	printf("%d\n", ft_isdigit('9'));
+	printf("%d\n", ft_isdigit('a'));
+	printf("%d\n", ft_isdigit('&'));
+}

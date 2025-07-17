@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   1_ft_isalphaV1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 16:11:14 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 07:02:37 by rwessner         ###   ########.fr       */
+/*   Created: 2025/07/12 09:19:21 by rwessner          #+#    #+#             */
+/*   Updated: 2025/07/17 06:39:48 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Arquivo: libft.h
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdio.h>
 
-# include <stddef.h>
+int	ft_isalpha(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-
-size_t	ft_strlen(const char *s);
-#endif
+int	main(void)
+{
+	printf("%d\n", ft_isalpha('a'));
+	printf("%d\n", ft_isalpha('z'));
+	printf("%d\n", ft_isalpha('A'));
+	printf("%d\n", ft_isalpha('Z'));
+	printf("%d\n", ft_isalpha(' '));
+	printf("%d\n", ft_isalpha('5'));
+	return (0);
+}
