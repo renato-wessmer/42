@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1_ft_isalphaV1.c                                   :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:19:21 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/17 06:39:48 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/17 07:40:45 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,4 @@ int	ft_isalpha(int c)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_isalpha('a'));
-	printf("%d\n", ft_isalpha('z'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isalpha('Z'));
-	printf("%d\n", ft_isalpha(' '));
-	printf("%d\n", ft_isalpha('5'));
-	return (0);
 }
