@@ -2,7 +2,7 @@
 NAME = libft.a
 
 #Variables
-SRC_DIR = srcs
+SRC_DIR = functions
 INC_DIR = includes
 
 # Compiler
@@ -15,6 +15,19 @@ CC_FLAGS=-Wall \
          -I$(INC_DIR)
 
 # Source
+
+TESTING_DIR = $(SRC_DIR)/Testing_and_Type_Checking_Functions
+TESTING_SRC = $(TESTING_DIR)/ft_isalnum.c \
+              $(TESTING_DIR)/ft_isalpha.c \
+              $(TESTING_DIR)/ft_isascii.c \
+              $(TESTING_DIR)/ft_isdigit.c \
+              $(TESTING_DIR)/ft_isprint.c \
+              $(TESTING_DIR)/ft_atoi.c
+
+
+
+
+
 # Testing and Type Checking Functions
       SRC = $(SRC_DIR)/ft_isalnum.c $(SRC_DIR)/ft_isalpha.c $(SRC_DIR)/ft_isascii.c $(SRC_DIR)/ft_isdigit.c $(SRC_DIR)/ft_isprint.c $(SRC_DIR)/ft_atoi.c \
 # Conversion Functions

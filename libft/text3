@@ -1,0 +1,103 @@
+✅ Character Checks (ctype.h)
+isalnum
+
+isalpha
+
+isascii
+
+isdigit
+
+isprint
+
+✅ Conversion
+atoi
+
+itoa (não padrão POSIX; uso comum em implementações)
+
+tolower
+
+toupper
+
+✅ Memory
+bzero
+
+calloc
+
+memchr
+
+memcmp
+
+memcpy
+
+memmove
+
+memset
+
+✅ Strings
+strlen
+
+strchr
+
+strdup
+
+striteri – não existe na lib C padrão, é parte da libft
+
+strjoin (mais próximo: uso de strcat)
+
+strlcat (não POSIX, mas comum em BSD/libc)
+
+strlcpy (idem)
+
+strmapi – não existe na lib C padrão, é parte da libft
+
+strncmp
+
+strnstr (não POSIX; BSD extension)
+
+strrchr
+
+strtrim – não existe na lib C padrão, é parte da libft
+
+substr – também não padrão, uso interno em projetos como libft
+
+✅ Strings (continuação)
+split – não existe em libc. Implementação própria (baseada em strtok ou strchr)
+
+putchar_fd (com _fd, é específica da libft)
+
+putendl_fd (aproximação)
+
+putnbr_fd
+
+putstr_fd
+
+✅ Listas (Bonus - não fazem parte da lib C)
+Todas as funções ft_lst* são parte da libft, não têm equivalente direto em libc. Manipulam structs do tipo:
+
+c
+Copiar
+Editar
+typedef struct s_list {
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+São implementações próprias de listas encadeadas:
+
+ft_lstnew
+
+ft_lstadd_front
+
+ft_lstsize
+
+ft_lstlast
+
+ft_lstadd_back
+
+ft_lstdelone
+
+ft_lstclear
+
+ft_lstiter
+
+ft_lstmap
+
