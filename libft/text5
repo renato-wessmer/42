@@ -1,0 +1,353 @@
+🔠 int ft_isalnum(int c);
+int c – caractere (como valor ASCII) a ser verificado.
+Descrição: Verifica se o caractere é alfanumérico (letra ou dígito).
+
+🔠 int ft_isalpha(int c);
+int c – caractere a ser testado.
+Descrição: Verifica se o caractere é uma letra (A-Z ou a-z).
+
+🔠 int ft_isascii(int c);
+int c – caractere a ser testado.
+Descrição: Verifica se o valor está dentro da tabela ASCII padrão (valores de 0 a 127).
+
+🔠 int ft_isdigit(int c);
+int c – caractere a ser testado.
+Descrição: Verifica se o caractere é um dígito decimal (0-9).
+
+🔠 int ft_isprint(int c);
+int c – caractere a ser testado.
+Descrição: Verifica se o caractere é imprimível (valor ASCII de 32 a 126, inclusive o espaço).
+
+Se quiser, posso seguir agora com a próxima categoria: Conversion (ft_atoi, ft_itoa, etc). Deseja continuar?
+
+
+
+Você disse:
+int		ft_atoi(const char *nptr);
+char	*ft_itoa(int n); // não padrão POSIX
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+
+O ChatGPT disse:
+Ótimo! Agora vamos para a categoria Conversão. Aqui estão as assinaturas e descrições dos parâmetros dessas funções:
+
+🔁 int ft_atoi(const char *nptr);
+const char *nptr – ponteiro para uma string que representa um número (ex: "42", "-123").
+Descrição: Converte a string para um número inteiro (int), ignorando espaços em branco iniciais e parando ao encontrar um caractere não numérico.
+
+🔁 char *ft_itoa(int n); (não padrão POSIX)
+int n – número inteiro a ser convertido.
+Descrição: Converte o valor inteiro n em uma string representando esse número (ex: 42 → "42").
+
+🔁 int ft_tolower(int c);
+int c – caractere a ser convertido (representado como valor ASCII).
+Descrição: Converte uma letra maiúscula para minúscula, se aplicável (ex: 'A' → 'a'). Caso contrário, retorna o próprio caractere.
+
+🔁 int ft_toupper(int c);
+int c – caractere a ser convertido (representado como valor ASCII).
+Descrição: Converte uma letra minúscula para maiúscula, se aplicável (ex: 'a' → 'A'). Caso contrário, retorna o próprio caractere.
+
+Se quiser, posso continuar com as funções de memória agora (ft_bzero, ft_calloc, etc). Deseja que eu siga?
+
+
+
+Você disse:
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+
+O ChatGPT disse:
+Excelente! Agora vamos para a categoria Funções de Memória, com a explicação detalhada dos parâmetros de cada uma delas:
+
+🧠 void ft_bzero(void *s, size_t n);
+void *s – ponteiro para a área de memória a ser preenchida.
+
+size_t n – número de bytes a serem definidos como zero.
+Descrição: Preenche os n primeiros bytes da memória apontada por s com zero (\0).
+
+🧠 void *ft_calloc(size_t nmemb, size_t size);
+size_t nmemb – número de elementos a serem alocados.
+
+size_t size – tamanho de cada elemento.
+Descrição: Aloca memória para um array de nmemb elementos, cada um com size bytes, e inicializa todos os bytes com zero.
+
+🧠 void *ft_memchr(const void *s, int c, size_t n);
+const void *s – ponteiro para a área de memória a ser examinada.
+
+int c – valor (como caractere) a ser procurado.
+
+size_t n – número de bytes a serem examinados.
+Descrição: Procura o primeiro byte igual a c nos primeiros n bytes da memória apontada por s.
+
+🧠 int ft_memcmp(const void *s1, const void *s2, size_t n);
+const void *s1 – ponteiro para o primeiro bloco de memória.
+
+const void *s2 – ponteiro para o segundo bloco de memória.
+
+size_t n – número de bytes a comparar.
+Descrição: Compara os primeiros n bytes de s1 e s2. Retorna 0 se forem iguais, valor negativo ou positivo se diferentes.
+
+🧠 void *ft_memcpy(void *dest, const void *src, size_t n);
+void *dest – ponteiro para o destino da cópia.
+
+const void *src – ponteiro para a origem dos dados.
+
+size_t n – número de bytes a copiar.
+Descrição: Copia n bytes de src para dest. As áreas não devem se sobrepor.
+
+🧠 void *ft_memmove(void *dest, const void *src, size_t n);
+void *dest – ponteiro para o destino da cópia.
+
+const void *src – ponteiro para a origem dos dados.
+
+size_t n – número de bytes a copiar.
+Descrição: Copia n bytes de src para dest, mesmo se as áreas se sobrepuserem. Garante que os dados não serão corrompidos.
+
+🧠 void *ft_memset(void *s, int c, size_t n);
+void *s – ponteiro para a memória a ser preenchida.
+
+int c – valor (caractere) para preencher.
+
+size_t n – número de bytes a preencher.
+Descrição: Preenche os primeiros n bytes da memória apontada por s com o byte c.
+
+Quer que eu siga agora para as funções de strings (ft_strlen, ft_strchr, etc)?
+
+
+
+Você disse:
+size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*)); // parte da libft
+char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+O ChatGPT disse:
+Excelente! Aqui estão as descrições detalhadas dos parâmetros das funções da categoria Strings:
+
+🔤 size_t ft_strlen(const char *s);
+const char *s – ponteiro para a string a ser medida.
+Descrição: Retorna o número de caracteres na string s, sem contar o \0 final.
+
+🔤 char *ft_strchr(const char *s, int c);
+const char *s – string onde a busca será feita.
+
+int c – caractere a ser localizado.
+Descrição: Retorna um ponteiro para a primeira ocorrência de c na string s (ou NULL se não for encontrado).
+
+🔤 char *ft_strdup(const char *s);
+const char *s – string a ser duplicada.
+Descrição: Aloca memória suficiente e retorna uma nova string com o mesmo conteúdo que s.
+
+🔤 void ft_striteri(char *s, void (*f)(unsigned int, char*)); (libft)
+char *s – string a ser iterada.
+
+void (*f)(unsigned int, char*) – função a ser aplicada a cada caractere, passando o índice e o ponteiro para o caractere.
+Descrição: Aplica a função f a cada caractere da string s, passando seu índice. A função f pode modificar os caracteres diretamente.
+
+🔤 char *ft_strjoin(char const *s1, char const *s2);
+char const *s1 – primeira string.
+
+char const *s2 – segunda string.
+Descrição: Retorna uma nova string que é a concatenação de s1 e s2.
+
+🔤 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+char *dst – string de destino (já existente).
+
+const char *src – string a ser concatenada.
+
+size_t dstsize – tamanho total do buffer de destino.
+Descrição: Concatena src ao final de dst, garantindo que o resultado caiba em dstsize (incluindo o \0).
+Retorna o tamanho total da string que tentou criar.
+
+🔤 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+char *dst – string de destino.
+
+const char *src – string de origem.
+
+size_t dstsize – tamanho do buffer de destino.
+Descrição: Copia a string src para dst, limitando-se a dstsize - 1 caracteres + \0.
+Retorna o tamanho total de src, independentemente do corte.
+
+🔤 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)); (libft)
+char const *s – string de entrada.
+
+char (*f)(unsigned int, char) – função que recebe o índice e o caractere e retorna um novo caractere.
+Descrição: Cria uma nova string com os resultados da aplicação de f em cada caractere de s.
+
+🔤 int ft_strncmp(const char *s1, const char *s2, size_t n);
+const char *s1 – primeira string.
+
+const char *s2 – segunda string.
+
+size_t n – número máximo de caracteres a comparar.
+Descrição: Compara até n caracteres das strings s1 e s2.
+Retorna 0 se forem iguais; valor negativo ou positivo caso contrário.
+
+🔤 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+const char *haystack – string onde será feita a busca.
+
+const char *needle – substring a ser encontrada.
+
+size_t len – número máximo de caracteres a examinar em haystack.
+Descrição: Retorna um ponteiro para a primeira ocorrência de needle em haystack, considerando no máximo len caracteres.
+
+🔤 char *ft_strrchr(const char *s, int c);
+const char *s – string a ser examinada.
+
+int c – caractere a ser procurado.
+Descrição: Retorna um ponteiro para a última ocorrência de c na string s.
+
+🔤 char *ft_strtrim(char const *s1, char const *set); (libft)
+char const *s1 – string original.
+
+char const *set – conjunto de caracteres a serem removidos do início e fim de s1.
+Descrição: Retorna uma nova string com os caracteres de set removidos das extremidades de s1.
+
+🔤 char *ft_substr(char const *s, unsigned int start, size_t len); (libft)
+char const *s – string de origem.
+
+unsigned int start – índice de início da substring.
+
+size_t len – tamanho da substring.
+Descrição: Retorna uma nova string com até len caracteres extraídos de s, iniciando em start.
+
+Se quiser, posso continuar com as funções restantes:
+➡️ split, put*_fd ou
+➡️ as funções de lista encadeada (ft_lst*).
+
+Qual deseja seguir agora?
+
+
+
+Você disse:
+char	**ft_split(char const *s, char c);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
+O ChatGPT disse:
+Perfeito! Vamos agora para a seção de manipulação de strings e saída em file descriptors (split e as funções put*_fd), seguindo o mesmo padrão de explicações:
+
+🪓 char **ft_split(char const *s, char c); (libft)
+char const *s – string original que será dividida.
+
+char c – caractere delimitador (separador).
+Descrição: Divide a string s em substrings com base no caractere c, ignorando múltiplos separadores consecutivos.
+Retorna um array de strings (char **) terminado por NULL.
+
+🖨️ void ft_putchar_fd(char c, int fd); (libft)
+char c – caractere a ser escrito.
+
+int fd – file descriptor de saída (ex: 1 para stdout, 2 para stderr).
+Descrição: Escreve o caractere c no file descriptor indicado por fd.
+
+🖨️ void ft_putendl_fd(char *s, int fd); (libft)
+char *s – string a ser escrita.
+
+int fd – file descriptor de saída.
+Descrição: Escreve a string s seguida de uma quebra de linha (\n) no file descriptor fd.
+
+🖨️ void ft_putnbr_fd(int n, int fd); (libft)
+int n – número inteiro a ser escrito.
+
+int fd – file descriptor de saída.
+Descrição: Converte o número n para string e o escreve no file descriptor fd.
+
+🖨️ void ft_putstr_fd(char *s, int fd); (libft)
+char *s – string a ser escrita.
+
+int fd – file descriptor de saída.
+Descrição: Escreve a string s (sem adicionar \n) no file descriptor fd.
+
+Essas funções são bastante úteis em projetos como libft e minishell, onde não se pode usar printf() diretamente.
+
+Posso seguir agora com as funções de lista encadeada (ft_lst*), se quiser. Deseja continuar?
+
+
+
+Você disse:
+
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+O ChatGPT disse:
+Perfeito! Agora vamos para a seção Bonus: Manipulação de Listas Encadeadas (ft_lst*). Essas funções são específicas da libft e operam sobre a estrutura t_list, normalmente definida assim:
+
+c
+Copiar
+Editar
+typedef struct s_list {
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+🧩 t_list *ft_lstnew(void *content);
+void *content – dado que será armazenado no novo nó.
+Descrição: Cria um novo nó da lista, com o campo content apontando para content e next definido como NULL.
+
+🧩 void ft_lstadd_front(t_list **lst, t_list *new);
+t_list **lst – ponteiro para o ponteiro do primeiro nó da lista.
+
+t_list *new – novo nó a ser adicionado.
+Descrição: Adiciona o nó new no início da lista apontada por lst.
+
+🧩 int ft_lstsize(t_list *lst);
+t_list *lst – ponteiro para o primeiro nó da lista.
+Descrição: Retorna o número de nós presentes na lista.
+
+🧩 t_list *ft_lstlast(t_list *lst);
+t_list *lst – ponteiro para o primeiro nó da lista.
+Descrição: Retorna o último nó da lista, ou NULL se a lista estiver vazia.
+
+🧩 void ft_lstadd_back(t_list **lst, t_list *new);
+t_list **lst – ponteiro para o ponteiro do primeiro nó da lista.
+
+t_list *new – novo nó a ser adicionado.
+Descrição: Adiciona o nó new ao final da lista.
+
+🧩 void ft_lstdelone(t_list *lst, void (*del)(void*));
+t_list *lst – nó a ser deletado.
+
+void (*del)(void *) – função que libera a memória de content.
+Descrição: Libera a memória do content usando del e, em seguida, libera o nó.
+
+🧩 void ft_lstclear(t_list **lst, void (*del)(void*));
+t_list **lst – ponteiro para o ponteiro da lista.
+
+void (*del)(void *) – função usada para liberar content.
+Descrição: Libera todos os nós da lista, utilizando del para liberar os conteúdos, e define *lst como NULL.
+
+🧩 void ft_lstiter(t_list *lst, void (*f)(void *));
+t_list *lst – ponteiro para o primeiro nó da lista.
+
+void (*f)(void *) – função a ser aplicada ao content de cada nó.
+Descrição: Aplica a função f a cada content dos nós da lista.
+
+🧩 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list *lst – lista original.
+
+void *(*f)(void *) – função aplicada ao content de cada nó para criar a nova lista.
+
+void (*del)(void *) – usada para liberar memória em caso de erro.
+Descrição: Cria uma nova lista com os resultados da função f aplicada a cada content da lista original. Em caso de erro, limpa a lista com del.
