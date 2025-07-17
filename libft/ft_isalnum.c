@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   3_ft_isalnumV1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 09:19:21 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/17 06:37:29 by rwessner         ###   ########.fr       */
+/*   Created: 2025/07/12 09:19:18 by rwessner          #+#    #+#             */
+/*   Updated: 2025/07/17 07:35:22 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "../../libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);
 	}
@@ -26,11 +27,12 @@ int	ft_isalpha(int c)
 
 int	main(void)
 {
-	printf("%d\n", ft_isalpha('a'));
-	printf("%d\n", ft_isalpha('z'));
-	printf("%d\n", ft_isalpha('A'));
-	printf("%d\n", ft_isalpha('Z'));
-	printf("%d\n", ft_isalpha(' '));
-	printf("%d\n", ft_isalpha('5'));
-	return (0);
+	printf("%d\n", ft_isalnum('1'));
+	printf("%d\n", ft_isalnum('9'));
+	printf("%d\n", ft_isalnum('a'));
+	printf("%d\n", ft_isalnum('&'));
+	printf("%d\n", ft_isalnum('A'));
+	printf("%d\n", ft_isalnum('Z'));
+	printf("%d\n", ft_isalnum(' '));
+	printf("%d\n", ft_isalnum('^'));
 }
