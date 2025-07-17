@@ -1,35 +1,7 @@
-🔠 int ft_isalnum(int c);
-int c – caractere (como valor ASCII) a ser verificado.
-Descrição: Verifica se o caractere é alfanumérico (letra ou dígito).
-
-🔠 int ft_isalpha(int c);
-int c – caractere a ser testado.
-Descrição: Verifica se o caractere é uma letra (A-Z ou a-z).
-
-🔠 int ft_isascii(int c);
-int c – caractere a ser testado.
-Descrição: Verifica se o valor está dentro da tabela ASCII padrão (valores de 0 a 127).
-
-🔠 int ft_isdigit(int c);
-int c – caractere a ser testado.
-Descrição: Verifica se o caractere é um dígito decimal (0-9).
-
-🔠 int ft_isprint(int c);
-int c – caractere a ser testado.
-Descrição: Verifica se o caractere é imprimível (valor ASCII de 32 a 126, inclusive o espaço).
-
-Se quiser, posso seguir agora com a próxima categoria: Conversion (ft_atoi, ft_itoa, etc). Deseja continuar?
-
-
-
-Você disse:
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n); // não padrão POSIX
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
-O ChatGPT disse:
-Ótimo! Agora vamos para a categoria Conversão. Aqui estão as assinaturas e descrições dos parâmetros dessas funções:
 
 🔁 int ft_atoi(const char *nptr);
 const char *nptr – ponteiro para uma string que representa um número (ex: "42", "-123").
@@ -47,12 +19,7 @@ Descrição: Converte uma letra maiúscula para minúscula, se aplicável (ex: '
 int c – caractere a ser convertido (representado como valor ASCII).
 Descrição: Converte uma letra minúscula para maiúscula, se aplicável (ex: 'a' → 'A'). Caso contrário, retorna o próprio caractere.
 
-Se quiser, posso continuar com as funções de memória agora (ft_bzero, ft_calloc, etc). Deseja que eu siga?
 
-
-
-Você disse:
-void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -60,11 +27,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
-O ChatGPT disse:
-Excelente! Agora vamos para a categoria Funções de Memória, com a explicação detalhada dos parâmetros de cada uma delas:
 
-🧠 void ft_bzero(void *s, size_t n);
-void *s – ponteiro para a área de memória a ser preenchida.
 
 size_t n – número de bytes a serem definidos como zero.
 Descrição: Preenche os n primeiros bytes da memória apontada por s com zero (\0).
