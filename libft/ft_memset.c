@@ -6,7 +6,7 @@
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:20:01 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/17 13:23:54 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/18 11:17:19 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	fill_in;
-	char	*str;
+	size_t			fill_in;
+	unsigned char	*str;
 
-	str = (char *)s;
+	str = (unsigned char *)s;
 	fill_in = 0;
 	while (fill_in < n)
 	{

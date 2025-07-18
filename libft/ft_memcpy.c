@@ -6,7 +6,7 @@
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:19:55 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/17 17:50:38 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/18 11:51:44 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	str_src = (const unsigned char *) src;
 	number_of_bytes = 0;
 	if (dest == NULL && src == NULL)
-	return (NULL);
-
+		return (NULL);
 	while (number_of_bytes < n)
 	{
 		str_dest[number_of_bytes] = str_src[number_of_bytes];
