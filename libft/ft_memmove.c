@@ -6,7 +6,7 @@
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:19:58 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/18 11:54:21 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/18 12:00:03 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	position = 0
 
-	if (!dest && !src)
-		return (0);
+	if (dest==NULL && src=NULL)
+		return (NULL);
 	position = 0;
 	if ((size_t)dest - (size_t)src < n)
 	{
