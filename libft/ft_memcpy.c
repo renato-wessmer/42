@@ -14,26 +14,32 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	number_of_bytes;
-	char	str_dest;
-	char	str_src;
+	size_t				number_of_bytes;
+	unsigned char		*str_dest;
+	const unsigned char	*str_src;
 
-	str_dest = (char *) dest;
-	str_src = (char *) src;
+	str_dest = (unsigned char *) dest;
+	str_src = (const unsigned char *) src;
 	number_of_bytes = 0;
+	if (dest == NULL && src == NULL)
+	return (NULL);
+
 	while (number_of_bytes < n)
 	{
-		str_dest = str_src;
+		str_dest[number_of_bytes] = str_src[number_of_bytes];
 		number_of_bytes++;
 	}
+	return (dest);
 }
 
 
-int	main(void)
+int main()
 {
-	char src[] = "Hello, world!";
+	char src[] = "Olá, mundo!";
 	char dest[20];
-	memcpy(dest, src, strlen(src) + 1);
-	printf("Destino: %s\n", dest); // Output: Destino: Hello, world!
+
+	ft_memcpy(dest, src, sizeof(src));
+	printf("Destino: %s\n", dest);
+
 	return 0;
 }
