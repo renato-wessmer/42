@@ -6,32 +6,28 @@
 /*   By: rwessner <rwessner@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 09:21:01 by rwessner          #+#    #+#             */
-/*   Updated: 2025/07/18 13:25:49 by rwessner         ###   ########.fr       */
+/*   Updated: 2025/07/18 21:35:37 by rwessner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stddef.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
 	i = 0;
-	if (dstsize != 0)
+	if (size != 0)
 	{
-		while (src[i] != '\0' && i < dstsize - 1)
+		while (src [i] != '\0' && i < (size - 1))
 		{
-			dst[i] = src[i];
+			dest[i] = src[i];
 			i++;
 		}
-		dst[i] = '\0';
+		dest[i] = '\0';
 	}
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	return (ft_strlen(src));
 }
 
 int	main(void)
